@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pronósticos de fútbol de A11 The Sentinel. Escenarios, probabilidades e incertidumbre en una vista de acceso abierto.">
+  <meta name="color-scheme" content="light dark">
+  <title>Pronósticos · A11 The Sentinel</title>
+  <link rel="icon" href="./sentinel.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#partidos">Saltar a pronósticos</a>
+  <header class="topbar">
+    <div class="wrap topline">
+      <a href="./" class="brand" aria-label="A11 The Sentinel, inicio"><img src="./sentinel.svg" width="40" height="40" alt=""><span><strong>THE SENTINEL</strong><small>A11 · FÚTBOL</small></span></a>
+      <button class="theme" id="theme" type="button" aria-pressed="false"><span aria-hidden="true">☾</span><span id="theme-label">Modo oscuro</span></button>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="mast" aria-labelledby="title">
+      <div class="pitch" aria-hidden="true"><div class="field"><i></i><b></b><em></em></div><span class="pitch-code">A11 / THE SENTINEL</span></div>
+      <div class="mast-content">
+        <div class="edition"><span class="dot" id="signal"></span><span id="edition-label">Cargando edición</span></div>
+        <h1 id="title">Pronósticos<br>de fútbol<span>.</span></h1>
+        <p>Escenarios del partido, probabilidad estimada y rango de incertidumbre.</p>
+      </div>
+    </section>
+    <section class="summary" aria-label="Datos de la edición">
+      <div><span>Edición</span><strong id="stats-date">—</strong></div>
+      <div><span>Partidos</span><strong id="stats-count">—</strong></div>
+      <div><span>Competiciones</span><strong id="stats-leagues">—</strong></div>
+      <div><span>Calculado · Lima</span><strong id="stats-time">—</strong></div>
+    </section>
+    <section id="partidos" aria-labelledby="fixtures-heading">
+      <div class="section-head">
+        <div><p class="kicker">A11 · PRONÓSTICOS</p><h2 id="fixtures-heading">Partidos</h2></div>
+        <button id="reload" class="outline" type="button"><span aria-hidden="true">↻</span> Actualizar</button>
+      </div>
+      <p class="notice" id="feed-status" role="status">Consultando la última edición del motor…</p>
+      <div class="filters" id="filters" hidden>
+        <div><label for="query">Buscar equipo</label><input id="query" type="search" placeholder="Ej. Liverpool" autocomplete="off"></div>
+        <div><label for="league">Competición</label><select id="league"><option value="">Todas las competiciones</option></select></div>
+        <div><label for="scope">Vista</label><select id="scope"><option value="edition">Toda la edición</option><option value="upcoming">Por iniciar</option></select></div>
+      </div>
+      <div class="results" id="results" hidden>
+        <div>
+          <p class="result-count" id="result-count"></p>
+          <ul class="matches" id="matches" aria-label="Pronósticos por partido"></ul>
+          <p id="empty" class="empty" hidden>No hay partidos que coincidan con esta vista.</p>
+        </div>
+        <aside id="desktop-detail" class="detail" aria-label="Detalle del pronóstico"></aside>
+      </div>
+      <noscript><p class="notice">Activa JavaScript para consultar los pronósticos y aplicar filtros.</p></noscript>
+    </section>
+  </main>
+  <dialog id="dialog" aria-labelledby="dialog-title">
+    <div class="dialog-top"><h2 id="dialog-title">Pronóstico</h2><form method="dialog"><button class="outline" aria-label="Cerrar detalle">Cerrar</button></form></div>
+    <div id="mobile-detail"></div>
+  </dialog>
+  <footer class="wrap foot"><span>A11 · THE SENTINEL</span><span>Pronósticos previos al inicio · Hora de Lima</span></footer>
+</body>
+</html>

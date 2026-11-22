@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "source": "A12 Champion",
+  "generatedAt": "2026-11-22T11:09:48.417778-05:00",
+  "date": "2026-11-22",
+  "forecasts": [
+    {
+      "id": "49c8a2ac08e3c7824935ff67",
+      "home": "Liverpool",
+      "away": "Man United",
+      "league": "Premier League",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.7802,
+      "lower": 0.7105,
+      "upper": 0.837,
+      "kickoff": "2026-11-22T16:30:00+00:00"
+    },
+    {
+      "id": "6276826c2199155157d762c0",
+      "home": "Osasuna",
+      "away": "Malaga",
+      "league": "La Liga",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.8083,
+      "lower": 0.5397,
+      "upper": 0.9381,
+      "kickoff": "2026-11-22T17:30:00+00:00"
+    },
+    {
+      "id": "4d3a333b633386296f1a063a",
+      "home": "Lorient",
+      "away": "Rennes",
+      "league": "Ligue 1",
+      "scenario": "Visitante no pierde (X2)",
+      "probability": 0.7865,
+      "lower": 0.4805,
+      "upper": 0.9362,
+      "kickoff": "2026-11-22T16:15:00+00:00"
+    },
+    {
+      "id": "d5eac0b4bb8fecbfc0f2933f",
+      "home": "Lommel SK",
+      "away": "Standard",
+      "league": "Jupiler Pro League",
+      "scenario": "Visitante no pierde (X2)",
+      "probability": 0.7203,
+      "lower": 0.331,
+      "upper": 0.9306,
+      "kickoff": "2026-11-22T18:15:00+00:00"
+    },
+    {
+      "id": "bade30c6f033005bb2c4d314",
+      "home": "Werder Bremen",
+      "away": "Hamburg",
+      "league": "Bundesliga",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.7932,
+      "lower": 0.6552,
+      "upper": 0.8856,
+      "kickoff": "2026-11-22T16:30:00+00:00"
+    },
+    {
+      "id": "9a73ebe64eda1bcc6b385e1a",
+      "home": "Marseille",
+      "away": "Le Mans",
+      "league": "Ligue 1",
+      "scenario": "Victoria local",
+      "probability": 0.6844,
+      "lower": 0.4374,
+      "upper": 0.8581,
+      "kickoff": "2026-11-22T19:45:00+00:00"
+    },
+    {
+      "id": "4bfd0ee5cb4b858276919b09",
+      "home": "Atalanta",
+      "away": "Inter",
+      "league": "Serie A",
+      "scenario": "Victoria visitante",
+      "probability": 0.659,
+      "lower": 0.525,
+      "upper": 0.7717,
+      "kickoff": "2026-11-22T19:45:00+00:00"
+    },
+    {
+      "id": "0ebba39f99b2886cd3379d7d",
+      "home": "Anderlecht",
+      "away": "Oud-Heverlee Leuven",
+      "league": "Jupiler Pro League",
+      "scenario": "Victoria local",
+      "probability": 0.653,
+      "lower": 0.5597,
+      "upper": 0.7359,
+      "kickoff": "2026-11-22T17:30:00+00:00"
+    },
+    {
+      "id": "a1bfd3914b776a2f0b91c4cb",
+      "home": "Getafe",
+      "away": "Ath Madrid",
+      "league": "La Liga",
+      "scenario": "Victoria visitante",
+      "probability": 0.6527,
+      "lower": 0.4747,
+      "upper": 0.7963,
+      "kickoff": "2026-11-22T20:00:00+00:00"
+    },
+    {
+      "id": "93373926548b6d188b9aaf87",
+      "home": "Milan",
+      "away": "Frosinone",
+      "league": "Serie A",
+      "scenario": "Victoria local",
+      "probability": 0.6286,
+      "lower": 0.3683,
+      "upper": 0.8309,
+      "kickoff": "2026-11-22T17:00:00+00:00"
+    }
+  ]
+}
