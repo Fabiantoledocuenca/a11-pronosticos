@@ -1,0 +1,107 @@
+name: Actualizar pronósticos y publicar
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "57 1-23/2 * * *"
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - styles.css
+      - app.js
+      - sentinel.svg
+      - estadio.webp
+      - cancha.webp
+      - .nojekyll
+      - .github/workflows/pronosticos.yml
+      - .github/sentinel/**
+permissions:
+  contents: read
+concurrency:
+  group: sentinel-pages-production
+  cancel-in-progress: false
+env:
+  TZ: America/Lima
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUTF8: "1"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    outputs:
+      sha: ${{ steps.package.outputs.sha }}
+    steps:
+      - name: Cargar web pública
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Cargar revisión privada del motor
+        if: github.event_name != 'push'
+        uses: actions/checkout@v4
+        with:
+          repository: Fabiantoledocuenca/a9_engine
+          ref: 2a3e8ebca139a88a7eee9c1869c84843fa5e4b1f
+          ssh-key: ${{ secrets.A12_ENGINE_READ_KEY }}
+          ssh-strict: true
+          persist-credentials: false
+          path: .engine
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12.10
+      - name: Instalar dependencias del cálculo
+        if: github.event_name != 'push'
+        run: python -m pip install --quiet --disable-pip-version-check -r .github/sentinel/requirements.txt
+      - name: Calcular pronósticos Champion
+        if: github.event_name != 'push'
+        env:
+          SENTINEL_STATE: ${{ secrets.A12_CLOUD_STATE }}
+        run: |
+          test -n "$SENTINEL_STATE"
+          python .github/sentinel/forecast.py --engine .engine --state "$RUNNER_TEMP/engine-state" --output "$RUNNER_TEMP/candidate.json"
+      - name: Validar el contenido público
+        id: package
+        run: python .github/sentinel/prepare_pages.py --candidate "$RUNNER_TEMP/candidate.json" --artifact "$RUNNER_TEMP/sentinel-pages" --output "$GITHUB_OUTPUT"
+      - name: Guardar edición aprobada
+        run: |
+          if ! git diff --quiet -- feed.json; then
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit --only -m "Actualiza pronósticos Champion" -- feed.json
+            git push origin HEAD:main
+          fi
+      - name: Preparar despliegue de los archivos públicos
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/sentinel-pages
+          retention-days: 1
+  publish:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar en GitHub Pages
+        uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Confirmar edición por HTTPS
+        env:
+          EXPECTED_SHA: ${{ needs.prepare.outputs.sha }}
+        run: |
+          for attempt in {1..10}; do
+            if curl -fsS --max-time 15 "https://fabiantoledocuenca.github.io/a11-pronosticos/feed.json?run=${GITHUB_RUN_ID}-$attempt" -o "$RUNNER_TEMP/verified.json"; then
+              actual=$(sha256sum "$RUNNER_TEMP/verified.json" | cut -d' ' -f1)
+              if [ "$actual" = "$EXPECTED_SHA" ]; then
+                echo "La edición publicada coincide con la verificada."
+                exit 0
+              fi
+            fi
+            sleep 10
+          done
+          exit 1

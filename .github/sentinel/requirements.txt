@@ -1,0 +1,9 @@
+numpy==2.4.3
+scipy==1.17.1
+pandas==2.3.3
+requests==2.32.3
+python-dotenv==1.2.2
+fastapi==0.135.2
+pydantic==2.12.5
+starlette==1.0.0
+anyio==4.13.0

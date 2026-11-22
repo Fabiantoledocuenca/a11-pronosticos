@@ -1,5 +1,8 @@
 const $ = (id) => document.getElementById(id);
 const lima = 'America/Lima';
+const clockFormat = new Intl.DateTimeFormat('es-PE', {
+  timeZone:lima, hour:'2-digit', minute:'2-digit', second:'2-digit', hourCycle:'h23'
+});
 const media = matchMedia('(max-width: 850px)');
 const refreshMs = 60_000;
 const formatTime = new Intl.DateTimeFormat('es-PE', {timeZone:lima, hour:'2-digit', minute:'2-digit', hour12:false});
@@ -12,6 +15,34 @@ let failure = false;
 let busy = false;
 let signature = '';
 let detailOpeningButton = null;
+let clockSample = null;
+let clockTimer;
+
+function now() {
+  return clockSample ? clockSample.time + (performance.now() - clockSample.received) : Date.now();
+}
+function paintClock() {
+  clearTimeout(clockTimer);
+  const instant = now();
+  const label = clockFormat.format(instant);
+  const element = $('peru-clock');
+  element.textContent = label;
+  element.dateTime = label + '-05:00';
+  const zone = $('clock-zone');
+  zone.title = clockSample ? 'Sincronizado con la hora de respuesta del sitio' : 'A partir del reloj del dispositivo';
+  clockTimer = setTimeout(paintClock, 1000 - instant % 1000 + 16);
+}
+function syncClock(response, sent, received) {
+  const rtt = received - sent;
+  const time = Date.parse(response.headers.get('date') || '');
+  const age = Number(response.headers.get('age') || '0');
+  if (!Number.isFinite(time) || !Number.isFinite(age) || age !== 0 || rtt > 4000) return;
+  const candidate = time + 500 + rtt / 2;
+  if (!clockSample || Math.abs(candidate - now()) > 1750) {
+    clockSample = {time:candidate, received};
+    paintClock();
+  }
+}
 
 function dayAt(instant) {
   const parts = Object.fromEntries(dateParts.formatToParts(instant).map(({type,value})=>[type,value]));
@@ -36,7 +67,7 @@ function validate(payload) {
   if (payload?.version !== 1 || payload.source !== 'A12 Champion' ||
       !isoDate(payload.date) || !validTime(payload.generatedAt) ||
       ![0,1].includes(dateOffset(new Date(payload.generatedAt),payload.date)) ||
-      Date.parse(payload.generatedAt) > Date.now() + 300_000 ||
+      Date.parse(payload.generatedAt) > now() + 300_000 ||
       !Array.isArray(payload.forecasts) || payload.forecasts.length > 500) {
     throw new Error('Edición incompleta');
   }
@@ -61,8 +92,8 @@ const order = (a,b) => ((a.kickoff ? Date.parse(a.kickoff) : Infinity) - (b.kick
   a.league.localeCompare(b.league, 'es') || a.home.localeCompare(b.home, 'es');
 
 function updateEdition() {
-  const daysAhead = feed ? dateOffset(new Date(),feed.date) : -1;
-  const live = feed && !failure && [0,1].includes(daysAhead) && feed.forecasts.some(row=>upcoming(row, Date.now()));
+  const daysAhead = feed ? dateOffset(new Date(now()),feed.date) : -1;
+  const live = feed && !failure && [0,1].includes(daysAhead) && feed.forecasts.some(row=>upcoming(row, now()));
   $('signal').classList.toggle('current', Boolean(live));
   $('edition-label').textContent = feed ? live ? daysAhead === 0 ? 'Edición de hoy' : 'Próxima jornada' : 'Última edición' : failure ? 'Sin conexión al feed' : 'Cargando edición';
   const message = !feed ? failure ? 'No se pudo cargar la edición del motor. Vuelve a intentarlo.' : 'Consultando la última edición del motor…'
@@ -84,7 +115,7 @@ function updateEdition() {
 }
 function timing(row) {
   if (!row.kickoff) return 'Horario no confirmado';
-  return (upcoming(row, Date.now()) ? 'Por iniciar · ' : 'Hora programada · ') + formatTime.format(new Date(row.kickoff));
+  return (upcoming(row, now()) ? 'Por iniciar · ' : 'Hora programada · ') + formatTime.format(new Date(row.kickoff));
 }
 function detail(target, row) {
   target.replaceChildren();
@@ -122,14 +153,14 @@ function options() {
 }
 function renderMatches(force = false) {
   if (!feed) return;
-  const now = Date.now();
+  const asOf = now();
   const q = normalize($('query').value);
   const league = $('league').value;
   const scope = $('scope').value;
   const rows = feed.forecasts.filter(row=> (!league || league === row.league) &&
     (!q || normalize(row.home + ' ' + row.away + ' ' + row.league).includes(q)) &&
-    (scope !== 'upcoming' || upcoming(row, now))).sort(order);
-  const nextSignature = JSON.stringify([feed.generatedAt,rows.map(row=>[row,upcoming(row,now)]),scope]);
+    (scope !== 'upcoming' || upcoming(row, asOf))).sort(order);
+  const nextSignature = JSON.stringify([feed.generatedAt,rows.map(row=>[row,upcoming(row,asOf)]),scope]);
   if (!force && signature === nextSignature) return;
   signature = nextSignature;
   const focusId = document.activeElement?.dataset.matchId;
@@ -177,8 +208,10 @@ async function refresh() {
   try {
     const url = new URL('./feed.json', location.href);
     url.searchParams.set('t', String(Date.now()));
+    const sent = performance.now();
     const response = await fetch(url, {cache:'no-store', signal:controller.signal});
     if (!response.ok) throw new Error('HTTP ' + response.status);
+    syncClock(response, sent, performance.now());
     const incoming = validate(await response.json());
     if (feed && Date.parse(incoming.generatedAt) < Date.parse(feed.generatedAt)) throw new Error('Edición anterior');
     if (!feed || feed.generatedAt !== incoming.generatedAt) {
@@ -229,5 +262,6 @@ media.addEventListener('change',()=>{
 setInterval(()=>{
   if (!document.hidden) refresh();
 },refreshMs);
-document.addEventListener('visibilitychange',()=>{if (!document.hidden) refresh()});
+document.addEventListener('visibilitychange',()=>{if (!document.hidden) {paintClock(); refresh();}});
+paintClock();
 refresh();

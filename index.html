@@ -15,12 +15,19 @@
   <header class="topbar">
     <div class="wrap topline">
       <a href="./" class="brand" aria-label="A11 The Sentinel, inicio"><img src="./sentinel.svg" width="40" height="40" alt=""><span><strong>THE SENTINEL</strong><small>A11 · FÚTBOL</small></span></a>
-      <button class="theme" id="theme" type="button" aria-pressed="false"><span aria-hidden="true">☾</span><span id="theme-label">Modo oscuro</span></button>
+      <div class="top-actions">
+        <div class="clock" aria-label="Reloj de Perú">
+          <span class="clock-label"><i aria-hidden="true"></i>Hora de Perú</span>
+          <time id="peru-clock" datetime="00:00:00">—:—:—</time>
+          <span class="clock-zone" id="clock-zone">Lima · UTC−5</span>
+        </div>
+        <button class="theme" id="theme" type="button" aria-pressed="false"><span aria-hidden="true">☾</span><span id="theme-label">Modo oscuro</span></button>
+      </div>
     </div>
   </header>
   <main class="wrap">
     <section class="mast" aria-labelledby="title">
-      <div class="pitch" aria-hidden="true"><div class="field"><i></i><b></b><em></em></div><span class="pitch-code">A11 / THE SENTINEL</span></div>
+      <div class="pitch" aria-hidden="true"><picture><img src="./estadio.webp" width="1650" height="900" alt="" fetchpriority="high"></picture></div>
       <div class="mast-content">
         <div class="edition"><span class="dot" id="signal"></span><span id="edition-label">Cargando edición</span></div>
         <h1 id="title">Pronósticos<br>de fútbol<span>.</span></h1>
@@ -50,7 +57,10 @@
           <ul class="matches" id="matches" aria-label="Pronósticos por partido"></ul>
           <p id="empty" class="empty" hidden>No hay partidos que coincidan con esta vista.</p>
         </div>
-        <aside id="desktop-detail" class="detail" aria-label="Detalle del pronóstico"></aside>
+        <aside class="match-sidebar" aria-label="Detalle del pronóstico">
+          <div class="sidebar-image" aria-hidden="true"><img src="./cancha.webp" width="800" height="500" alt="" loading="lazy"></div>
+          <div id="desktop-detail" class="detail"></div>
+        </aside>
       </div>
       <noscript><p class="notice">Activa JavaScript para consultar los pronósticos y aplicar filtros.</p></noscript>
     </section>
