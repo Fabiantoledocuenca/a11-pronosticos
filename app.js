@@ -18,6 +18,7 @@ function dayAt(instant) {
   return [parts.year,parts.month,parts.day].join('-');
 }
 const showDate = (iso) => formatDate.format(new Date(iso + 'T12:00:00Z'));
+const dateOffset = (instant, date) => (Date.parse(date) - Date.parse(dayAt(instant))) / 86_400_000;
 const validText = (text) => typeof text === 'string' && text.trim().length > 0 && text.length < 200;
 const probability = (value) => typeof value === 'number' && Number.isFinite(value) && value >= 0 && value <= 1;
 const isoDate = (value) => typeof value === 'string' && /^\d{4}-\d\d-\d\d$/.test(value) &&
@@ -34,7 +35,7 @@ function node(tag, className, label) {
 function validate(payload) {
   if (payload?.version !== 1 || payload.source !== 'A12 Champion' ||
       !isoDate(payload.date) || !validTime(payload.generatedAt) ||
-      dayAt(new Date(payload.generatedAt)) !== payload.date ||
+      ![0,1].includes(dateOffset(new Date(payload.generatedAt),payload.date)) ||
       Date.parse(payload.generatedAt) > Date.now() + 300_000 ||
       !Array.isArray(payload.forecasts) || payload.forecasts.length > 500) {
     throw new Error('Edición incompleta');
@@ -60,9 +61,10 @@ const order = (a,b) => ((a.kickoff ? Date.parse(a.kickoff) : Infinity) - (b.kick
   a.league.localeCompare(b.league, 'es') || a.home.localeCompare(b.home, 'es');
 
 function updateEdition() {
-  const live = feed && !failure && feed.date === dayAt(new Date()) && feed.forecasts.some(row=>upcoming(row, Date.now()));
+  const daysAhead = feed ? dateOffset(new Date(),feed.date) : -1;
+  const live = feed && !failure && [0,1].includes(daysAhead) && feed.forecasts.some(row=>upcoming(row, Date.now()));
   $('signal').classList.toggle('current', Boolean(live));
-  $('edition-label').textContent = feed ? live ? 'Edición de hoy' : 'Última edición' : failure ? 'Sin conexión al feed' : 'Cargando edición';
+  $('edition-label').textContent = feed ? live ? daysAhead === 0 ? 'Edición de hoy' : 'Próxima jornada' : 'Última edición' : failure ? 'Sin conexión al feed' : 'Cargando edición';
   const message = !feed ? failure ? 'No se pudo cargar la edición del motor. Vuelve a intentarlo.' : 'Consultando la última edición del motor…'
     : failure ? 'No se pudo actualizar. Se muestra la última edición consultada.'
     : feed.forecasts.length === 0 ? 'La edición no contiene pronósticos disponibles.'
@@ -73,7 +75,10 @@ function updateEdition() {
   $('stats-date').textContent = showDate(feed.date);
   $('stats-count').textContent = feed.forecasts.length;
   $('stats-leagues').textContent = new Set(feed.forecasts.map(p=>p.league)).size;
-  $('stats-time').textContent = formatTime.format(new Date(feed.generatedAt));
+  const generated = new Date(feed.generatedAt);
+  $('stats-time').textContent = (dayAt(generated) === feed.date ? '' :
+    new Intl.DateTimeFormat('es-PE',{timeZone:lima,day:'numeric',month:'short'}).format(generated) + ' · ') +
+    formatTime.format(generated);
   $('filters').hidden = false;
   $('results').hidden = false;
 }
@@ -87,7 +92,8 @@ function detail(target, row) {
   target.append(node('p','kicker',row.league), node('h3','',row.home + ' vs ' + row.away),
     node('p','date-line',showDate(feed.date) + ' · ' + timing(row)), node('p','scenario-label',row.scenario),
     node('p','big',formatPct.format(row.probability)));
-  const source = 'A12 Champion · Calculado a las ' + formatTime.format(new Date(feed.generatedAt)) + ' (Lima).';
+  const generated = new Date(feed.generatedAt);
+  const source = 'A12 Champion · Calculado el ' + showDate(dayAt(generated)) + ' a las ' + formatTime.format(generated) + ' (Lima).';
   if (row.lower === null) {
     target.append(node('p','rangemeta','Intervalo no disponible'), node('p','detail-foot',source));
     return;
@@ -178,6 +184,11 @@ async function refresh() {
     if (!feed || feed.generatedAt !== incoming.generatedAt) {
       feed = incoming;
       options();
+      if ($('dialog').open) {
+        const current = feed.forecasts.find(row=>row.id === selected);
+        if (current) detail($('mobile-detail'),current);
+        else $('dialog').close();
+      }
     }
     failure = false;
   } catch {
