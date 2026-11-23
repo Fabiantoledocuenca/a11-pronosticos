@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-22T17:16:47.625030-05:00",
+  "generatedAt": "2026-11-22T21:41:02.586263-05:00",
   "date": "2026-11-23",
   "forecasts": [
     {
@@ -10,9 +10,9 @@
       "away": "Fiorentina",
       "league": "Serie A",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.7649,
-      "lower": 0.4162,
-      "upper": 0.9369,
+      "probability": 0.7633,
+      "lower": 0.4181,
+      "upper": 0.9354,
       "kickoff": "2026-11-23T19:45:00+00:00"
     },
     {
