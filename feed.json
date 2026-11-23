@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-23T09:29:32.837656-05:00",
+  "generatedAt": "2026-11-23T11:33:22.010574-05:00",
   "date": "2026-11-23",
   "forecasts": [
     {
@@ -10,9 +10,9 @@
       "away": "Fiorentina",
       "league": "Serie A",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.7661,
-      "lower": 0.4169,
-      "upper": 0.9375,
+      "probability": 0.7767,
+      "lower": 0.4778,
+      "upper": 0.9297,
       "kickoff": "2026-11-23T19:45:00+00:00"
     },
     {
@@ -21,9 +21,9 @@
       "away": "Elche",
       "league": "La Liga",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7129,
-      "lower": 0.4764,
-      "upper": 0.8714,
+      "probability": 0.7132,
+      "lower": 0.4841,
+      "upper": 0.8682,
       "kickoff": "2026-11-23T20:00:00+00:00"
     },
     {
@@ -32,9 +32,9 @@
       "away": "Everton",
       "league": "Premier League",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.6882,
-      "lower": 0.4046,
-      "upper": 0.8776,
+      "probability": 0.6886,
+      "lower": 0.3996,
+      "upper": 0.8802,
       "kickoff": "2026-11-23T20:00:00+00:00"
     }
   ]
