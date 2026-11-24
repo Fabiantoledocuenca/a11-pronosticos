@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-24T09:22:02.322562-05:00",
+  "generatedAt": "2026-11-24T09:46:23.122916-05:00",
   "date": "2026-11-24",
   "forecasts": [
     {
@@ -43,9 +43,9 @@
       "away": "Derby",
       "league": "Championship",
       "scenario": "Victoria local",
-      "probability": 0.7572,
-      "lower": 0.5745,
-      "upper": 0.8781,
+      "probability": 0.7605,
+      "lower": 0.5791,
+      "upper": 0.88,
       "kickoff": "2026-11-24T20:00:00+00:00"
     },
     {
