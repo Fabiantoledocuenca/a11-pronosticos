@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-23T22:31:33.635484-05:00",
+  "generatedAt": "2026-11-24T09:22:02.322562-05:00",
   "date": "2026-11-24",
   "forecasts": [
     {
@@ -10,9 +10,9 @@
       "away": "Aberdeen",
       "league": "Scottish Premiership",
       "scenario": "Victoria local",
-      "probability": 0.8069,
-      "lower": 0.5695,
-      "upper": 0.9295,
+      "probability": 0.817,
+      "lower": 0.5723,
+      "upper": 0.9371,
       "kickoff": "2026-11-24T20:00:00+00:00"
     },
     {
@@ -21,53 +21,9 @@
       "away": "West Ham",
       "league": "Championship",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.7844,
-      "lower": 0.4087,
-      "upper": 0.9503,
-      "kickoff": "2026-11-24T19:45:00+00:00"
-    },
-    {
-      "id": "1363d57e033b3cc1b3b962bd",
-      "home": "Norwich",
-      "away": "QPR",
-      "league": "Championship",
-      "scenario": "Local no pierde (1X)",
-      "probability": 0.7412,
-      "lower": 0.5337,
-      "upper": 0.8776,
-      "kickoff": "2026-11-24T19:45:00+00:00"
-    },
-    {
-      "id": "f9e1db4694e7ae40770bdc25",
-      "home": "Bristol City",
-      "away": "Wrexham",
-      "league": "Championship",
-      "scenario": "Local no pierde (1X)",
-      "probability": 0.6935,
-      "lower": 0.4836,
-      "upper": 0.8453,
-      "kickoff": "2026-11-24T19:45:00+00:00"
-    },
-    {
-      "id": "dab5bc95d931c41d85e2d988",
-      "home": "Wolves",
-      "away": "Derby",
-      "league": "Championship",
-      "scenario": "Victoria local",
-      "probability": 0.7519,
-      "lower": 0.5717,
-      "upper": 0.8731,
-      "kickoff": "2026-11-24T20:00:00+00:00"
-    },
-    {
-      "id": "0f8525af1aaf7b1c0f94bc38",
-      "home": "Middlesbrough",
-      "away": "Swansea",
-      "league": "Championship",
-      "scenario": "Victoria local",
-      "probability": 0.6882,
-      "lower": 0.4956,
-      "upper": 0.8322,
+      "probability": 0.7952,
+      "lower": 0.393,
+      "upper": 0.9588,
       "kickoff": "2026-11-24T19:45:00+00:00"
     },
     {
@@ -76,9 +32,53 @@
       "away": "Lincoln",
       "league": "Championship",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.6676,
-      "lower": 0.4345,
-      "upper": 0.84,
+      "probability": 0.6864,
+      "lower": 0.443,
+      "upper": 0.8576,
+      "kickoff": "2026-11-24T19:45:00+00:00"
+    },
+    {
+      "id": "dab5bc95d931c41d85e2d988",
+      "home": "Wolves",
+      "away": "Derby",
+      "league": "Championship",
+      "scenario": "Victoria local",
+      "probability": 0.7572,
+      "lower": 0.5745,
+      "upper": 0.8781,
+      "kickoff": "2026-11-24T20:00:00+00:00"
+    },
+    {
+      "id": "1363d57e033b3cc1b3b962bd",
+      "home": "Norwich",
+      "away": "QPR",
+      "league": "Championship",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.747,
+      "lower": 0.542,
+      "upper": 0.8805,
+      "kickoff": "2026-11-24T19:45:00+00:00"
+    },
+    {
+      "id": "f9e1db4694e7ae40770bdc25",
+      "home": "Bristol City",
+      "away": "Wrexham",
+      "league": "Championship",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.6871,
+      "lower": 0.4944,
+      "upper": 0.8315,
+      "kickoff": "2026-11-24T19:45:00+00:00"
+    },
+    {
+      "id": "0f8525af1aaf7b1c0f94bc38",
+      "home": "Middlesbrough",
+      "away": "Swansea",
+      "league": "Championship",
+      "scenario": "Victoria local",
+      "probability": 0.6769,
+      "lower": 0.4907,
+      "upper": 0.82,
       "kickoff": "2026-11-24T19:45:00+00:00"
     },
     {
@@ -87,9 +87,9 @@
       "away": "Preston",
       "league": "Championship",
       "scenario": "Victoria local",
-      "probability": 0.645,
-      "lower": 0.4347,
-      "upper": 0.811,
+      "probability": 0.67,
+      "lower": 0.4703,
+      "upper": 0.8227,
       "kickoff": "2026-11-24T19:45:00+00:00"
     },
     {
@@ -98,9 +98,9 @@
       "away": "Southampton",
       "league": "Championship",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.6376,
-      "lower": 0.4512,
-      "upper": 0.7901,
+      "probability": 0.6522,
+      "lower": 0.4591,
+      "upper": 0.8055,
       "kickoff": "2026-11-24T19:45:00+00:00"
     },
     {
@@ -109,9 +109,9 @@
       "away": "Dundee",
       "league": "Scottish Premiership",
       "scenario": "Victoria local",
-      "probability": 0.5951,
-      "lower": 0.3372,
-      "upper": 0.8093,
+      "probability": 0.6404,
+      "lower": 0.3364,
+      "upper": 0.8622,
       "kickoff": "2026-11-24T19:45:00+00:00"
     }
   ]
