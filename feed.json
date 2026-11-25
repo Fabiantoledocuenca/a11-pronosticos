@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-24T19:36:16.534752-05:00",
+  "generatedAt": "2026-11-25T05:34:15.513660-05:00",
   "date": "2026-11-25",
   "forecasts": [
     {
@@ -10,9 +10,9 @@
       "away": "Millwall",
       "league": "Championship",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7096,
-      "lower": 0.3885,
-      "upper": 0.9038,
+      "probability": 0.7319,
+      "lower": 0.431,
+      "upper": 0.9077,
       "kickoff": "2026-11-25T20:00:00+00:00"
     },
     {
@@ -21,9 +21,9 @@
       "away": "West Brom",
       "league": "Championship",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.751,
-      "lower": 0.5751,
-      "upper": 0.8705,
+      "probability": 0.7549,
+      "lower": 0.579,
+      "upper": 0.8733,
       "kickoff": "2026-11-25T19:45:00+00:00"
     },
     {
@@ -32,9 +32,9 @@
       "away": "Blackburn",
       "league": "Championship",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.6555,
-      "lower": 0.4528,
-      "upper": 0.8139,
+      "probability": 0.6637,
+      "lower": 0.4567,
+      "upper": 0.8224,
       "kickoff": "2026-11-25T19:45:00+00:00"
     },
     {
@@ -43,9 +43,9 @@
       "away": "Birmingham",
       "league": "Championship",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.6548,
-      "lower": 0.3836,
-      "upper": 0.8525,
+      "probability": 0.6626,
+      "lower": 0.396,
+      "upper": 0.8547,
       "kickoff": "2026-11-25T19:45:00+00:00"
     }
   ]
