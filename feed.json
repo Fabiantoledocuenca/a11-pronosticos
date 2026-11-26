@@ -1,52 +1,129 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-25T06:11:18.709949-05:00",
-  "date": "2026-11-25",
+  "generatedAt": "2026-11-26T08:17:01.717357-05:00",
+  "date": "2026-11-27",
   "forecasts": [
     {
-      "id": "a5bccaa3b1e430bb7b0a1dad",
-      "home": "Stoke",
-      "away": "Millwall",
-      "league": "Championship",
+      "id": "5f6b25fc1e40547e54396a6b",
+      "home": "Werder Bremen",
+      "away": "M'gladbach",
+      "league": "Bundesliga",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7319,
-      "lower": 0.431,
-      "upper": 0.9077,
-      "kickoff": "2026-11-25T20:00:00+00:00"
+      "probability": 0.7928,
+      "lower": 0.3036,
+      "upper": 0.9711,
+      "kickoff": "2026-11-27T19:30:00+00:00"
     },
     {
-      "id": "eee84f91f003da271398f038",
-      "home": "Bolton",
-      "away": "West Brom",
+      "id": "7df0ee024029893c0bf6d3f5",
+      "home": "Rizespor",
+      "away": "Kasimpasa",
+      "league": "Super Lig",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.7692,
+      "lower": 0.4521,
+      "upper": 0.9308,
+      "kickoff": "2026-11-27T17:00:00+00:00"
+    },
+    {
+      "id": "6d34ef771c0f41a8d6ec5186",
+      "home": "Oud-Heverlee Leuven",
+      "away": "Kortrijk",
+      "league": "Jupiler Pro League",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.7634,
+      "lower": 0.3923,
+      "upper": 0.9416,
+      "kickoff": "2026-11-27T19:45:00+00:00"
+    },
+    {
+      "id": "c290aa66e8882a7b581c83f2",
+      "home": "Maritimo",
+      "away": "Nacional",
+      "league": "Liga Portugal",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.7534,
+      "lower": 0.4848,
+      "upper": 0.9084,
+      "kickoff": "2026-11-27T20:15:00+00:00"
+    },
+    {
+      "id": "a7a9b47f558cde235995447f",
+      "home": "Brest",
+      "away": "Paris FC",
+      "league": "Ligue 1",
+      "scenario": "Visitante no pierde (X2)",
+      "probability": 0.7351,
+      "lower": 0.4272,
+      "upper": 0.9117,
+      "kickoff": "2026-11-27T19:45:00+00:00"
+    },
+    {
+      "id": "f3ac06a2a3b3e1397f5d5311",
+      "home": "Venezia",
+      "away": "Bologna",
+      "league": "Serie A",
+      "scenario": "Visitante no pierde (X2)",
+      "probability": 0.734,
+      "lower": 0.4826,
+      "upper": 0.8909,
+      "kickoff": "2026-11-27T19:45:00+00:00"
+    },
+    {
+      "id": "430e98e1438505b4b96a59cc",
+      "home": "Levante",
+      "away": "Santander",
+      "league": "La Liga",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.714,
+      "lower": 0.4174,
+      "upper": 0.8969,
+      "kickoff": "2026-11-27T20:00:00+00:00"
+    },
+    {
+      "id": "cd9c99ce9c00810ced0b4fed",
+      "home": "Groningen",
+      "away": "Willem II",
+      "league": "Eredivisie",
+      "scenario": "Victoria local",
+      "probability": 0.6817,
+      "lower": 0.3554,
+      "upper": 0.8927,
+      "kickoff": "2026-11-27T19:00:00+00:00"
+    },
+    {
+      "id": "5e16d068fff72d80927cdb8a",
+      "home": "Nott'm Forest",
+      "away": "Chelsea",
+      "league": "Premier League",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.6804,
+      "lower": 0.471,
+      "upper": 0.8358,
+      "kickoff": "2026-11-27T20:00:00+00:00"
+    },
+    {
+      "id": "5453ab1d748a56858bbe5f92",
+      "home": "Southampton",
+      "away": "Middlesbrough",
       "league": "Championship",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.7551,
-      "lower": 0.5788,
-      "upper": 0.8737,
-      "kickoff": "2026-11-25T19:45:00+00:00"
+      "probability": 0.6795,
+      "lower": 0.3515,
+      "upper": 0.8923,
+      "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
-      "id": "23aa072bb71eed2ef634c3e2",
-      "home": "Burnley",
-      "away": "Birmingham",
-      "league": "Championship",
-      "scenario": "Visitante no pierde (X2)",
-      "probability": 0.6764,
-      "lower": 0.416,
-      "upper": 0.8598,
-      "kickoff": "2026-11-25T19:45:00+00:00"
-    },
-    {
-      "id": "909ee2777164847863873e92",
-      "home": "Watford",
-      "away": "Blackburn",
-      "league": "Championship",
+      "id": "2b2829087cdf6bcd8eb654d0",
+      "home": "Alanyaspor",
+      "away": "Konyaspor",
+      "league": "Super Lig",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.6637,
-      "lower": 0.4567,
-      "upper": 0.8224,
-      "kickoff": "2026-11-25T19:45:00+00:00"
+      "probability": 0.6659,
+      "lower": 0.4571,
+      "upper": 0.8252,
+      "kickoff": "2026-11-27T17:00:00+00:00"
     }
   ]
 }
