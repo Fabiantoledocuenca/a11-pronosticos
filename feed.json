@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-26T17:39:19.939975-05:00",
+  "generatedAt": "2026-11-26T17:56:53.448713-05:00",
   "date": "2026-11-27",
   "forecasts": [
     {
@@ -10,9 +10,9 @@
       "away": "M'gladbach",
       "league": "Bundesliga",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7928,
-      "lower": 0.3036,
-      "upper": 0.9711,
+      "probability": 0.8038,
+      "lower": 0.314,
+      "upper": 0.9734,
       "kickoff": "2026-11-27T19:30:00+00:00"
     },
     {
@@ -119,10 +119,10 @@
       "home": "Alanyaspor",
       "away": "Konyaspor",
       "league": "Super Lig",
-      "scenario": "Local no pierde (1X)",
-      "probability": 0.6566,
-      "lower": 0.4451,
-      "upper": 0.8201,
+      "scenario": "Visitante no pierde (X2)",
+      "probability": 0.6621,
+      "lower": 0.4439,
+      "upper": 0.8279,
       "kickoff": "2026-11-27T17:00:00+00:00"
     }
   ]
