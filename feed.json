@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-26T08:49:01.490330-05:00",
+  "generatedAt": "2026-11-26T17:39:19.939975-05:00",
   "date": "2026-11-27",
   "forecasts": [
     {
@@ -16,26 +16,26 @@
       "kickoff": "2026-11-27T19:30:00+00:00"
     },
     {
-      "id": "7df0ee024029893c0bf6d3f5",
-      "home": "Rizespor",
-      "away": "Kasimpasa",
-      "league": "Super Lig",
-      "scenario": "Local no pierde (1X)",
-      "probability": 0.7692,
-      "lower": 0.4521,
-      "upper": 0.9308,
-      "kickoff": "2026-11-27T17:00:00+00:00"
-    },
-    {
       "id": "6d34ef771c0f41a8d6ec5186",
       "home": "Oud-Heverlee Leuven",
       "away": "Kortrijk",
       "league": "Jupiler Pro League",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7634,
-      "lower": 0.3923,
-      "upper": 0.9416,
+      "probability": 0.765,
+      "lower": 0.3942,
+      "upper": 0.9421,
       "kickoff": "2026-11-27T19:45:00+00:00"
+    },
+    {
+      "id": "7df0ee024029893c0bf6d3f5",
+      "home": "Rizespor",
+      "away": "Kasimpasa",
+      "league": "Super Lig",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.7575,
+      "lower": 0.4641,
+      "upper": 0.9185,
+      "kickoff": "2026-11-27T17:00:00+00:00"
     },
     {
       "id": "c290aa66e8882a7b581c83f2",
@@ -43,9 +43,9 @@
       "away": "Nacional",
       "league": "Liga Portugal",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7534,
-      "lower": 0.4848,
-      "upper": 0.9084,
+      "probability": 0.7481,
+      "lower": 0.483,
+      "upper": 0.9042,
       "kickoff": "2026-11-27T20:15:00+00:00"
     },
     {
@@ -76,9 +76,9 @@
       "away": "Santander",
       "league": "La Liga",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.714,
-      "lower": 0.4174,
-      "upper": 0.8969,
+      "probability": 0.7269,
+      "lower": 0.4428,
+      "upper": 0.8992,
       "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
@@ -87,10 +87,21 @@
       "away": "Willem II",
       "league": "Eredivisie",
       "scenario": "Victoria local",
-      "probability": 0.6817,
-      "lower": 0.3554,
-      "upper": 0.8927,
+      "probability": 0.686,
+      "lower": 0.3634,
+      "upper": 0.8931,
       "kickoff": "2026-11-27T19:00:00+00:00"
+    },
+    {
+      "id": "5453ab1d748a56858bbe5f92",
+      "home": "Southampton",
+      "away": "Middlesbrough",
+      "league": "Championship",
+      "scenario": "Visitante no pierde (X2)",
+      "probability": 0.6817,
+      "lower": 0.3507,
+      "upper": 0.8947,
+      "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
       "id": "5e16d068fff72d80927cdb8a",
@@ -104,25 +115,14 @@
       "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
-      "id": "5453ab1d748a56858bbe5f92",
-      "home": "Southampton",
-      "away": "Middlesbrough",
-      "league": "Championship",
-      "scenario": "Visitante no pierde (X2)",
-      "probability": 0.6795,
-      "lower": 0.3515,
-      "upper": 0.8923,
-      "kickoff": "2026-11-27T20:00:00+00:00"
-    },
-    {
       "id": "2b2829087cdf6bcd8eb654d0",
       "home": "Alanyaspor",
       "away": "Konyaspor",
       "league": "Super Lig",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.6659,
-      "lower": 0.4571,
-      "upper": 0.8252,
+      "probability": 0.6566,
+      "lower": 0.4451,
+      "upper": 0.8201,
       "kickoff": "2026-11-27T17:00:00+00:00"
     }
   ]
