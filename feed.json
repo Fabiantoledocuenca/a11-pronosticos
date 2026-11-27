@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-26T17:56:53.448713-05:00",
+  "generatedAt": "2026-11-27T00:28:36.618568-05:00",
   "date": "2026-11-27",
   "forecasts": [
     {
@@ -32,9 +32,9 @@
       "away": "Kasimpasa",
       "league": "Super Lig",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7575,
-      "lower": 0.4641,
-      "upper": 0.9185,
+      "probability": 0.7618,
+      "lower": 0.4528,
+      "upper": 0.9251,
       "kickoff": "2026-11-27T17:00:00+00:00"
     },
     {
@@ -43,9 +43,9 @@
       "away": "Nacional",
       "league": "Liga Portugal",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7481,
-      "lower": 0.483,
-      "upper": 0.9042,
+      "probability": 0.7468,
+      "lower": 0.4608,
+      "upper": 0.9106,
       "kickoff": "2026-11-27T20:15:00+00:00"
     },
     {
@@ -54,20 +54,9 @@
       "away": "Paris FC",
       "league": "Ligue 1",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.7351,
-      "lower": 0.4272,
-      "upper": 0.9117,
-      "kickoff": "2026-11-27T19:45:00+00:00"
-    },
-    {
-      "id": "f3ac06a2a3b3e1397f5d5311",
-      "home": "Venezia",
-      "away": "Bologna",
-      "league": "Serie A",
-      "scenario": "Visitante no pierde (X2)",
-      "probability": 0.734,
-      "lower": 0.4826,
-      "upper": 0.8909,
+      "probability": 0.7352,
+      "lower": 0.4331,
+      "upper": 0.9098,
       "kickoff": "2026-11-27T19:45:00+00:00"
     },
     {
@@ -87,10 +76,21 @@
       "away": "Willem II",
       "league": "Eredivisie",
       "scenario": "Victoria local",
-      "probability": 0.686,
-      "lower": 0.3634,
-      "upper": 0.8931,
+      "probability": 0.7011,
+      "lower": 0.3806,
+      "upper": 0.8996,
       "kickoff": "2026-11-27T19:00:00+00:00"
+    },
+    {
+      "id": "f3ac06a2a3b3e1397f5d5311",
+      "home": "Venezia",
+      "away": "Bologna",
+      "league": "Serie A",
+      "scenario": "Visitante no pierde (X2)",
+      "probability": 0.7005,
+      "lower": 0.43,
+      "upper": 0.8788,
+      "kickoff": "2026-11-27T19:45:00+00:00"
     },
     {
       "id": "5453ab1d748a56858bbe5f92",
@@ -98,9 +98,9 @@
       "away": "Middlesbrough",
       "league": "Championship",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.6817,
-      "lower": 0.3507,
-      "upper": 0.8947,
+      "probability": 0.6818,
+      "lower": 0.3621,
+      "upper": 0.8899,
       "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
@@ -109,9 +109,9 @@
       "away": "Chelsea",
       "league": "Premier League",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.6804,
-      "lower": 0.471,
-      "upper": 0.8358,
+      "probability": 0.6805,
+      "lower": 0.4668,
+      "upper": 0.8383,
       "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
@@ -120,9 +120,9 @@
       "away": "Konyaspor",
       "league": "Super Lig",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.6621,
-      "lower": 0.4439,
-      "upper": 0.8279,
+      "probability": 0.6662,
+      "lower": 0.4631,
+      "upper": 0.822,
       "kickoff": "2026-11-27T17:00:00+00:00"
     }
   ]
