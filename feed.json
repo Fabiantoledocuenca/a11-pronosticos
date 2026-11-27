@@ -1,41 +1,30 @@
 {
   "version": 1,
   "source": "A12 Champion",
-  "generatedAt": "2026-11-27T00:28:36.618568-05:00",
+  "generatedAt": "2026-11-27T03:15:02.042749-05:00",
   "date": "2026-11-27",
   "forecasts": [
-    {
-      "id": "5f6b25fc1e40547e54396a6b",
-      "home": "Werder Bremen",
-      "away": "M'gladbach",
-      "league": "Bundesliga",
-      "scenario": "Local no pierde (1X)",
-      "probability": 0.8038,
-      "lower": 0.314,
-      "upper": 0.9734,
-      "kickoff": "2026-11-27T19:30:00+00:00"
-    },
-    {
-      "id": "6d34ef771c0f41a8d6ec5186",
-      "home": "Oud-Heverlee Leuven",
-      "away": "Kortrijk",
-      "league": "Jupiler Pro League",
-      "scenario": "Local no pierde (1X)",
-      "probability": 0.765,
-      "lower": 0.3942,
-      "upper": 0.9421,
-      "kickoff": "2026-11-27T19:45:00+00:00"
-    },
     {
       "id": "7df0ee024029893c0bf6d3f5",
       "home": "Rizespor",
       "away": "Kasimpasa",
       "league": "Super Lig",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7618,
-      "lower": 0.4528,
-      "upper": 0.9251,
+      "probability": 0.7535,
+      "lower": 0.4606,
+      "upper": 0.9163,
       "kickoff": "2026-11-27T17:00:00+00:00"
+    },
+    {
+      "id": "cd9c99ce9c00810ced0b4fed",
+      "home": "Groningen",
+      "away": "Willem II",
+      "league": "Eredivisie",
+      "scenario": "Victoria local",
+      "probability": 0.7469,
+      "lower": 0.4475,
+      "upper": 0.9149,
+      "kickoff": "2026-11-27T19:00:00+00:00"
     },
     {
       "id": "c290aa66e8882a7b581c83f2",
@@ -43,10 +32,21 @@
       "away": "Nacional",
       "league": "Liga Portugal",
       "scenario": "Local no pierde (1X)",
-      "probability": 0.7468,
-      "lower": 0.4608,
-      "upper": 0.9106,
+      "probability": 0.7402,
+      "lower": 0.4656,
+      "upper": 0.903,
       "kickoff": "2026-11-27T20:15:00+00:00"
+    },
+    {
+      "id": "6d34ef771c0f41a8d6ec5186",
+      "home": "Oud-Heverlee Leuven",
+      "away": "Kortrijk",
+      "league": "Jupiler Pro League",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.7399,
+      "lower": 0.3568,
+      "upper": 0.9358,
+      "kickoff": "2026-11-27T19:45:00+00:00"
     },
     {
       "id": "a7a9b47f558cde235995447f",
@@ -71,15 +71,15 @@
       "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
-      "id": "cd9c99ce9c00810ced0b4fed",
-      "home": "Groningen",
-      "away": "Willem II",
-      "league": "Eredivisie",
-      "scenario": "Victoria local",
-      "probability": 0.7011,
-      "lower": 0.3806,
-      "upper": 0.8996,
-      "kickoff": "2026-11-27T19:00:00+00:00"
+      "id": "5453ab1d748a56858bbe5f92",
+      "home": "Southampton",
+      "away": "Middlesbrough",
+      "league": "Championship",
+      "scenario": "Visitante no pierde (X2)",
+      "probability": 0.7115,
+      "lower": 0.3492,
+      "upper": 0.919,
+      "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
       "id": "f3ac06a2a3b3e1397f5d5311",
@@ -87,32 +87,10 @@
       "away": "Bologna",
       "league": "Serie A",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.7005,
-      "lower": 0.43,
-      "upper": 0.8788,
+      "probability": 0.7076,
+      "lower": 0.4419,
+      "upper": 0.8809,
       "kickoff": "2026-11-27T19:45:00+00:00"
-    },
-    {
-      "id": "5453ab1d748a56858bbe5f92",
-      "home": "Southampton",
-      "away": "Middlesbrough",
-      "league": "Championship",
-      "scenario": "Visitante no pierde (X2)",
-      "probability": 0.6818,
-      "lower": 0.3621,
-      "upper": 0.8899,
-      "kickoff": "2026-11-27T20:00:00+00:00"
-    },
-    {
-      "id": "5e16d068fff72d80927cdb8a",
-      "home": "Nott'm Forest",
-      "away": "Chelsea",
-      "league": "Premier League",
-      "scenario": "Local no pierde (1X)",
-      "probability": 0.6805,
-      "lower": 0.4668,
-      "upper": 0.8383,
-      "kickoff": "2026-11-27T20:00:00+00:00"
     },
     {
       "id": "2b2829087cdf6bcd8eb654d0",
@@ -120,10 +98,32 @@
       "away": "Konyaspor",
       "league": "Super Lig",
       "scenario": "Visitante no pierde (X2)",
-      "probability": 0.6662,
-      "lower": 0.4631,
-      "upper": 0.822,
+      "probability": 0.6722,
+      "lower": 0.4744,
+      "upper": 0.8233,
       "kickoff": "2026-11-27T17:00:00+00:00"
+    },
+    {
+      "id": "5e16d068fff72d80927cdb8a",
+      "home": "Nott'm Forest",
+      "away": "Chelsea",
+      "league": "Premier League",
+      "scenario": "Local no pierde (1X)",
+      "probability": 0.6659,
+      "lower": 0.4576,
+      "upper": 0.8249,
+      "kickoff": "2026-11-27T20:00:00+00:00"
+    },
+    {
+      "id": "5f6b25fc1e40547e54396a6b",
+      "home": "Werder Bremen",
+      "away": "M'gladbach",
+      "league": "Bundesliga",
+      "scenario": "Victoria local",
+      "probability": 0.5922,
+      "lower": 0.2554,
+      "upper": 0.8601,
+      "kickoff": "2026-11-27T19:30:00+00:00"
     }
   ]
 }
